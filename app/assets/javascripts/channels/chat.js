@@ -1,5 +1,7 @@
 App.chat = App.cable.subscriptions.create(
-  {channel: 'ChatChannel'},
+  {
+    channel: 'ChatChannel'
+  },
   {
     received: function(message) {
       window.EventBus.$emit('newMessage', message);
